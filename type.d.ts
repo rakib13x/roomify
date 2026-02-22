@@ -40,7 +40,17 @@ interface StoreHostedImageParams {
   projectId: string;
   label: "source" | "rendered";
 }
+
 interface Generate3DViewParams {
   sourceImage: string;
   projectId?: string | null;
 }
+
+type AuthContext = {
+  isSignedIn: boolean;
+  userName: string | null;
+  userId: string | null;
+  refreshAuth: () => Promise<boolean>;
+  signIn: () => Promise<boolean>;
+  signOut: () => Promise<boolean>;
+};
