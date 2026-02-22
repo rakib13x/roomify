@@ -40,3 +40,7 @@ interface StoreHostedImageParams {
   projectId: string;
   label: "source" | "rendered";
 }
+interface Generate3DViewParams {
+  sourceImage: string;
+  projectId?: string | null;
+}
